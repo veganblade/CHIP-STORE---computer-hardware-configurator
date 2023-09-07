@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Profile page</h1>
+    <br>
+    {% if user.is_authenticated %}
+        <p>User active</p>
+    {% else %}
+    <p>User not found</p>
+    {% endif %}
+{% endblock %}

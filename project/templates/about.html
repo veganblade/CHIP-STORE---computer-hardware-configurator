@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="page-body">
+        <section class="page-head">
+          <img alt="landing" src="{% static 'img/about.png' %}" class="aboutImg"/>
+          <div class="page-info">
+            <p class="page-title">CHIP-STORE</p><br>
+        
+            <p class="welcome">Добро пожаловать! CHIP-STORE - 
+            это конфигуратор <br>компьютерных комплектующих!
+             Мы рады предложить <br>вам удобный инструмент для 
+             создания идеального <br>компьютера под ваши нужды.</p>
+            <button class="coloredButton">Начать</button>
+          </div>
+        </section>
+        <section class="section1 center">
+          <div class="section-info">
+            <p class="section-title">Преимущества</p>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <i class="far fa-4x fa-handshake" aria-hidden="true"></i>
+              <p class="fw-600">Индивидуальный подход</p>
+              <p>Наш конфигуратор позволяет выбрать комплектующие для компьютера, <br>
+                исходя из ваших целей использования, бюджета и предпочтений<br>
+                 по процессору, видеокарте и объему оперативной памяти.</p>
+            </div>
+            <div class="feature">
+              <i class="fab fa-4x fa-sketch" aria-hidden="true"></i>
+              <p class="fw-600">Надежность</p>
+              <p>Мы сотрудничаем с лучшими производителями компьютерных комплектующих,<br>
+               чтобы гарантировать качество и надежность наших продуктов.<br>
+               Мы также предоставляем гарантию на все комплектующие.</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-4x fa-sliders-h" aria-hidden="true"></i>
+              <p class="fw-600">Гибкость</p>
+              <p>Наша цель - помочь вам создать идеальный компьютер для работы, игр <br>
+              или редактирования видео и фото. В этом нам помогает высокоуровневый<br>
+              алгоритм который поможет вам с выбором основываясь на ваших ответах. </p>
+            </div>
+          </div>
+        </section>
+      
+
+        <div class="section-info">
+            <p class="sectionTitle">От автора</p>
+            <p class="section-text">Спасибо за выбор нашего конфигуратора компьютерных комплектующих. Мы надеемся,<br>
+             что вы найдете все необходимые компоненты для создания вашего идеального компьютера!</p>
+          </div>
+
+        <section class="section4">
+          <div class="section-info">
+            <p class="sectiontitle center">Хотите оставить отзыв?</p>
+          </div>
+          <div class="contact">
+            <div class="container contact-form">
+            <label class="text-muted mb-2">
+              Имя
+            </label>
+            <div class="cdb-form">
+                <input type="text" placeholder="Дмитрий" class="form-control bg-light"/>
+            </div>
+            <label class="text-muted mb-2">
+              Адрес эл. почты
+            </label>
+            <div class="cdb-form">
+                <input type="email" placeholder="dima@mail.ru" class="form-control bg-light"/>
+            </div>
+            <label class="text-muted mb-2">
+              Ваше письмо
+            </label>
+            <div class="cdb-form">
+                <textarea class="form-control bg-light h-120" placeholder="Мне так понравился ваш конфигуратор..."></textarea>
+            </div>
+              <button class="btn btn-dark btn-block">
+                  Отправить письмо
+              </button>
+            </div>
+            <div class="container contact-info">
+              <p class="h2 mb-5">Contact Information</p>
+              <p><i class="me-5 fa fa-map-marker-alt" aria-hidden="true"></i>г. Уфа, 450000 Россия</p>
+              <p><i class="me-5 fa fa-phone-alt" aria-hidden="true"></i>+ 7(987) 849 - 29 - 89</p>
+              <p><i class="me-5 fa fa-comment-alt" aria-hidden="true"></i>mitya.bro.056@mail.ru</p>
+            </div>
+          </div>
+        </section>
+      </div>
+{% endblock %}

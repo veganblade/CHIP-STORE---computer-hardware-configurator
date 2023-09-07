@@ -1,0 +1,75 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <br>
+    <div class="container-fluid my-carousel">
+		<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{% static 'img/1.jpg' %}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'img/2.jpg' %}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'img/3.jpg' %}" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<div id="subheader">
+		<div class="cart">
+			
+		</div>
+		<br>
+	</div>
+	<div id="content">
+		<div id="sidebar">
+			<h3 id = "CategoriesText">Категории</h3>
+			<ul id ="ulcategories">
+				<li {% if not category %}class="selectedd"{% endif %}>
+					<a class = "categ" href="{% url 'product_list' %}"><div class="foncat">Все</div></a>
+				</li>
+				{% for c in categories %}
+					<li {% if category.slug == c.slug %}class="selectedd"{% endif %}>
+						<a class = "categ" href="{{ c.get_absolute_url }}"><div class="foncat">{{ c.name }}</div></a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div id="main" class="product-list">
+			<h1>{% if category %}{{ category.name }}{% else %}Товары{% endif %}</h1>
+			{% for product in products %}
+				<div class="item">
+					<a href="{{ product.get_absolute_url }}">
+						<img class = "card" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+					</a>
+					<a class="aproduct" href="{{ product.get_absolute_url }}"><p class="nameText">{{ product.name }}</p></a><br>
+					<p class="priceText">Цена: {{ product.price }} ₽</p>
+					<a class="likeBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+							<path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+						</svg>
+					</a>
+					
+				</div>
+				
+			{% endfor %}
+		</div>
+{% endblock %}

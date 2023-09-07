@@ -1,0 +1,56 @@
+.podtr{
+    background-color: rgb(219, 219, 219);
+
+}
+.podtr td{
+    width: 350px;
+
+}
+.podtr thead{
+    text-align: center;
+    align-items: center;
+}
+
+.zaglav{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    display: inline-block;
+}
+.podtr svg{
+    background-size: 170px;
+}
+
+.zaglav .bi{
+    float:left;
+    height:60px;
+    width:400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    margin-left: 500px;
+}
+.zaglav h1{
+    align-items:center;
+    text-align: center;
+}
+.zaglav .bi-fan{
+    margin-left: 555px;
+}
+.zaglav .bi-pc{
+    margin-left: 630px;
+}
+.zaglav .bi-pci-card{
+    margin-left: 565px;
+}
+.zaglav .bi-memory{
+    margin-left: 485px;
+}
+.zaglav .bi-sd-card{
+    margin-left: 615px;
+}
+.zaglav .bi-cpu{
+    margin-left: 580px;
+}

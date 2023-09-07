@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="post" action="{% url 'my_builds' %}">{% csrf_token %}
+{% for product in products %}
+  <div>{{ product.name }} - {{ product.price }}</div>
+  
+{% empty %}
+
+  <div>Нет товаров</div>
+{% endfor %}
+
+<button type="submit">Сохранить сборку</button>
+</form>
+
+
+
+
+{% if products %}
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Тэг</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.tag }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>Товаров не найдено</p>
+{% endif %}
+{% endblock %}

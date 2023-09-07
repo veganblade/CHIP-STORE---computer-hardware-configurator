@@ -1,0 +1,102 @@
+#video{
+    margin-left: 20px;
+}
+.assemblyPrev{
+    width: 100%;
+    height: 520px;
+    display: inline-block;
+    
+}
+#warning{
+    float: right;
+    position:absolute;
+    right:110px;
+    top:200px;
+    text-align:justify;
+    font-size: 24px;
+    width: 900px;
+}
+#assemblyGlav{
+    font-size: 22px;
+    text-align:left;
+}
+#assemblyDet{
+    width:100%;
+    display: inline-block;
+}
+.assemblyDetH{
+    display: inline-block;
+    width: 100%;
+}
+.bi-tools{
+    float: left;
+    left:350px;
+    margin-right:15px;
+    margin-top: 5px;
+    position:absolute;
+}
+.sborka{
+    border: 1px solid black;
+    margin: 20px;
+    width: 800px;
+    height:520px;
+    float:left;
+    margin-left: 70px;
+    display: block;
+    position: static;
+    text-align: center;
+    
+}
+.sborkaDet{
+    background-color: rgb(159, 159, 214);
+    
+}
+.spisok, .spisokTxt{
+    width:400px;
+    text-align: justify;
+    font-size: 20px;
+}
+.spisokTxt{
+    margin-left: 25px;
+}
+.imgAssembly{
+    width: 320px;
+    height: 250px;
+    float: right;
+    margin-top: -200px;
+}
+#c1{
+    margin-top: -335px;
+    margin-right: 5px;
+}
+#c2{
+    margin-top: -425px;
+    margin-right: 5px;
+}
+#c3{
+    margin-top: -488px;
+    margin-right: 5px;
+}
+#c4{
+    margin-top: -262px;
+    margin-right: 5px;
+}
+#c5{
+    margin-top: -292px;
+    margin-right: 5px;
+}
+#c6{
+    margin-top: -350px;
+    margin-right: 5px;
+}
+#c7{
+    margin-top: -262px;
+    margin-right: 5px;
+}
+#c8{
+    margin-top: -260px;
+    margin-right: 5px;
+}
+.hInst{
+    text-align: center;
+}

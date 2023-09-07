@@ -1,0 +1,87 @@
+/*ABOUT*/
+
+.aboutImg{
+
+    position: relative;
+    overflow: hidden;
+    
+   }
+   .aboutImg::after{
+    content: "";
+    position: absolute;
+    top: 93%;
+    left: 0;
+    height: 100%;
+    width: 150%;
+    background: red;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+   }
+   .page-title{
+  
+    font-size: 38px;
+    height: 50px;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    margin-top: -860px;
+    margin-left: 1400px;
+    color: #fff;
+  
+   }
+   .welcome{
+      top: 0px;
+      position: absolute;
+      top:400px;
+      margin-left: 1100px;
+      font-size: 24px;
+      color:#fff;
+      width: 100%;
+      
+   }
+  .features{
+    position:absolute;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    top:1000px;
+  }
+  .fw-600{
+    font-weight: bold;
+  }
+  .feature{
+    display: inline-block;
+    padding: 10px;
+    margin-right: 5px;
+  }
+  .coloredButton{
+    color:#fff;
+    background-color:#61dafb;
+    position: absolute;
+    top: 580px;
+    left:1480px;
+    height: 58px;
+    width: 125px;
+    font-size: 26px;
+    padding: 5px;
+    text-align: center;
+  }
+  .coloredButton:hover{
+    transform: scale(1.1);
+    transition: transform 0.7s ease-in-out;
+    box-shadow: 0 2px 6px 0px black;
+  }
+  .section-title{
+    font-weight: bold;
+    position: absolute;
+    top:920px;
+    text-align: center;
+    left:820px;
+    font-size: 26px;
+  }
